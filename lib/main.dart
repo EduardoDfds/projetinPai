@@ -1,10 +1,17 @@
+import 'package:aulinha_ne_pai/components/cartaoAdaptativo.dart';
+import 'package:aulinha_ne_pai/components/cartaoPaisagem.dart';
+import 'package:aulinha_ne_pai/components/cartaoResponsivo.dart';
+import 'package:aulinha_ne_pai/components/cartaoRetrato.dart';
 import 'package:aulinha_ne_pai/components/classe1.dart';
 import 'package:aulinha_ne_pai/components/classe2.dart';
 import 'package:aulinha_ne_pai/components/classe3.dart';
 import 'package:aulinha_ne_pai/components/telaCampo.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  /*WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);*/
   runApp(const MyApp());
 }
 
@@ -20,7 +27,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.purple,
         ),
         routes: {
-          '/': (context) => MyHomePage(title: 'Projetin'),
+          '/': (context) => CartaoResponsivel(),
           '/classe1': (context) => const Classe1(
                 title: 'Classe1',
               ),
